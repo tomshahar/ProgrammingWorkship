@@ -1,0 +1,248 @@
+@keyframes cascade {
+  from {opacity: 0; visibility: hidden; border-width: 0px 0px 0px 0px; border-left-color: #e9e9e9;}
+  to {opacity: 0; visibility: visible; border-width: 10px 0px 0px 0px; border-left-color: black;}
+}
+/* change opacity to 0.8 in line 3*/
+
+@keyframes navbar {
+  from {opacity: 0; visibility: hidden;}
+  to {opacity: 0.8; visibility: visible;}
+}
+
+@keyframes blackbox {
+  from {opacity: 1; background-color: black;}
+  to {opacity: 0.5; background-color: black;}
+}
+@keyframes blank {
+
+}
+
+
+
+#reediv {
+  background-color: #b3c2bf;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+#container {
+  background-color: #b3c2bf;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+#slideshow, img.bgM {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-9999;
+  visibility: visible;
+}
+#slideshow1 {
+ background-image: url(1.jpg);
+}
+#blackbox {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -9998;
+  position: absolute;
+  opacity: 1;
+  animation: blackbox 6.2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+.search {
+  background-color: #e9e9e9;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  align: center;
+  opacity: 0.8;
+  animation: navbar 2s;
+  animation-delay: 2s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  height: 6.5vh;
+
+}
+
+.search input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    transition-duration: 0.4s;
+    animation: navbar 4s;
+    animation-delay: 2.2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.search a:hover {
+  background-color: #D3D3D3;
+}
+.search a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  animation: navbar 4s;
+  animation-delay: 2.2s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  height: 3vh;
+}
+.cascadeContainer {
+  width: 78%;
+  height: 700px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  overflow: hidden;
+}
+.cascade1 {
+  width: 100px;
+  height: 100px;
+  background-color: #e9e9e9;
+  opacity: 0;
+  margin: 1%;
+  display: inline-block;
+  transition-duration: 0.4s;
+}
+
+.cascade1:hover {
+  background-color: #D3D3D3;
+}
+.cascadeContainer a {
+  animation: cascade 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+
+}
+.cascadeContainer b {
+  animation: cascade 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+
+
+}
+.cascadeContainer c {
+  animation: cascade 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+
+}
+.cascadeContainer d {
+  animation: cascade 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+
+}
+.cascadeContainer e {
+  animation: cascade 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+
+}
+
+/* old dropdown stuff
+.dropdown {
+  float: left;
+  display: inline-block;
+  animation: navbar 4s;
+  animation-delay: 2.2s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  text-align: center;
+  padding: 14px 16px;
+  position: relative;
+  font-size: 17px;
+  height: 3vh;
+
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 14px 16px;
+    z-index: 1;
+    margin-top: 2.25vh;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    width: inherit;
+}
+
+.dropdown:hover {
+  background-color: #D3D3D3;
+}
+*/
+/*w3schools tutorial*/
+
+.dropbtn {
+    color: black;
+    padding: 14px 16px;
+    border: none;
+    animation: navbar 4s;
+    animation-delay: 2.2s;
+    visibility: visible;
+    animation-fill-mode: forwards;
+    float:left;
+    text-decoration: none;
+    font-size: 17px;
+    height: 7vh;
+
+
+
+}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #D3D3D3;
+    z-index: 1;
+    margin-top: 6.5vh;
+}
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    animation: navbar 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.dropdown-content1 a:hover {background-color: #ddd}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+
+}
+
+.dropdown1:hover .dropbtn {
+  background-color: #D3D3D3;
+
+}
