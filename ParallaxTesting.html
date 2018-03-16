@@ -4,9 +4,9 @@
 <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
 <title>Fortnite</title>
 <link rel="stylesheet" href="ParallaxStyles.css">
+<link rel="icon" href="Favicon.ico">
+
 </head>
-
-
 
 
 <body>
@@ -14,32 +14,81 @@
 <div class = "navbar">
 </div>
 -->
+<div id="pre__loadin">
+  <div class = "pre__loadin--title__wrap" id="title__wrap">
+    <div class="pre__loadin--title">
+      F
+    </div>
+    <div class="pre__loadin--title">
+      O
+    </div>
+    <div class="pre__loadin--title">
+      R
+    </div>
+    <div class="pre__loadin--title">
+      T
+    </div>
+    <div class="pre__loadin--title">
+      N
+    </div>
+    <div class="pre__loadin--title">
+      I
+    </div>
+    <div class="pre__loadin--title">
+      T
+    </div>
+    <div class="pre__loadin--title">
+      E
+    </div>
+  </div>
+  <div id="arrow__wrapper" onclick="loadin__start()">
+    <div class="arrow" id="pre__loadin--arrow"></div>
+  </div>
+</div>
 
+<div id="main__loadin">
 <div id="mainbar">
   <div id="maintitle">FORTNITE</div>
   <div class="container pullRight" id="searchbarboys">
-
-      <a>PISTOLS</a>
-      <a>CONSUMABLES</a>
-      <a>TRAPS</a>
+    <a>CHESTS</a>
+    <a href="#traps">TRAPS</a>
+    <a href="#consumables">CONSUMABLES</a>
+    <a href="#weapons">WEAPONS</a>
   </div>
 </div>
 
 <div class="parallax">
 
-
   <div class="parallax__group" id="group1">
-    <div class="parallax__layer parallax__layer--deep">
-    </div>
 
     <div class="parallax__layer parallax__layer--back">
       <div></div>
     </div>
 
-
     <div class="parallax__layer parallax__layer--base">
-      <div class="trapezoid trapezoid--normal"></div>
-      <div class = "icon__anim"></div>
+      <div class = "spacer" id = "weapons"></div>
+      <div class="trapezoid trapezoid--normal">
+        WEAPONS
+      </div>
+      <div class="weaponarrangement">
+        <div class="gunarray1wrap">
+          ARs
+          <div class="gunarray1">
+              meme
+              <!--<div class="guns">
+                <div>Burst</div>
+                <div>Auto</div>
+                <div>Scoped</div>
+              </div>-->
+          </div>
+        </div>
+        <div>Shotguns</div>
+        <div>Snipers</div>
+        <div>Explosives</div>
+        <div>Pistols</div>
+        <div>SMGs</div>
+        <div>Special</div>
+      </div>
     </div>
 
   </div>
@@ -49,27 +98,32 @@
       <div></div>
     </div>
     <div class="parallax__layer parallax__layer--base">
-      <div class="trapezoid trapezoid--reverse"></div>
+      <div id="consumables" class="spacer"></div>
+      <div class="trapezoid trapezoid--reverse">
+        CONSUMABLES
+      </div>
     </div>
   </div>
+
   <div class = "parallax_group" id="group3">
     <div class="parallax__layer parallax__layer--back">
       <div></div>
     </div>
     <div class="parallax__layer parallax__layer--base">
-      <div class="trapezoid trapezoid--normal"></div>
+      <div id="traps" class="spacer"></div>
+      <div class="trapezoid trapezoid--normal">
+        TRAPS
+      </div>
     </div>
   </div>
 
 
-
-
-
-
 </div>
+<div>
+<script>
 
-<script src="dist/basicScroll.min.js"></script>
-
+</script>
+<script src="basicScroll/dist/basicScroll.min.js"></script>
 <script src="Parallax.js"></script>
 
 </body>
