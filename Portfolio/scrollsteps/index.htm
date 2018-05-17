@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///Users/tomshah/Documents/Classes2/ProgrammingWorkshop/Portfolio/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <link rel="stylesheet" href="./index_files/styles.css">
+
+  <script src="./index_files/jquery.min.js"></script>
+
+</head>
+<body id="body">
+  <div class="container" id="cont">
+  <div class="t1" id="t1">
+  </div>
+  <div class="separator">
+  </div>
+  <div class="t2" id="t2">
+  </div>
+  <div class="separator">
+  </div>
+  <div class="t3" id="t3">
+  </div>
+  </div>
+<script href="script.js"></script>
+<script>
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  console.log("scrolldisabled");
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    animating = false;
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null;
+    window.onwheel = null;
+    window.ontouchmove = null;
+    document.onkeydown = null;
+}
+
+  var animating = false;
+
+  function animatingCountdown() {
+    animating = false;
+  }
+  window.onscroll = function(e) {
+
+
+
+    /*set animating to false after animation duration*/
+    disableScroll();
+
+    /*check to see if scrolling up*/
+    var scrollUp = (this.oldScroll > this.scrollY);
+    this.oldScroll = this.scrollY;
+
+    /*If there is not a current animation, start one*/
+    if (animating == false) {
+      setTimeout(startScroll, 100, scrollUp);
+      animating = true;
+      console.log("scrollisstarting "+animating+scrollUp);
+
+    }
+
+
+
+  }
+  function section1(t1Pos) {
+    section=1;
+    window.scrollTo({
+        top: t1Pos,
+    });
+  }
+  function section2(t2Pos) {
+    section=2;
+    window.scrollTo({
+        top: t2Pos,
+    });
+  }
+  function section3(t3Pos) {
+    section=3;
+    window.scrollTo({
+        top: t3Pos,
+    });
+  }
+  var section = 1;
+  function startScroll(scrollUp) {
+    var t1Pos = document.getElementById('t1').offsetTop;
+    var t2Pos = document.getElementById('t2').offsetTop;
+    var t3Pos = document.getElementById('t3').offsetTop;
+    var t1 = document.getElementById('t1');
+    var t2 = document.getElementById('t2');
+    var t3 = document.getElementById('t3');
+
+    console.log("scroll function ran "+ scrollUp + t1Pos);
+
+    /*Scrollingdown*/
+    if (section == 1 && scrollUp == false) {
+      window.scrollTo({
+          top: t2Pos,
+            behavior: "smooth"
+      });
+      console.log("TESTscrolling to section 2"+section);
+      setTimeout(enableScroll, 1300);
+      setTimeout(section2, 1200, t2Pos);
+
+      return;
+    } else if (section == 2 && scrollUp == false) {
+      window.scrollTo({
+          top: t3Pos,
+          behavior: "smooth"
+      });
+
+      console.log("scrolling to section 3"+section);
+      setTimeout(enableScroll, 1300);
+      setTimeout(section3, 1200, t3Pos);
+
+      return;
+
+      /*scrolling up*/
+    } else if (section ==  3 && scrollUp == true) {
+      window.scrollTo({
+          top: t2Pos,
+          behavior: "smooth"
+      });
+      console.log("scrolling up to section 2"+section);
+      setTimeout(section2, 1200, t2Pos);
+      setTimeout(enableScroll, 1300);
+
+      return;
+    } else if (section ==  2 && scrollUp == true) {
+      window.scrollTo({
+          top: t1Pos,
+          behavior: "smooth"
+      });
+      setTimeout(section1, 1200, t1Pos);
+      console.log("scrolling up to section 1"+section);
+      setTimeout(enableScroll, 1300);
+
+      return;
+    }
+  }
+
+</script>
+
+
+
+
+<!--
+SOURCES
+https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+
+-->
+</body></html>

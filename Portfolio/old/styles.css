@@ -1,0 +1,164 @@
+.html, body {margin: 0}
+
+/*Font Faces*/
+@font-face {
+  font-family: "HammersmithOne-Regular";
+  src: url("fonts/Hammersmith_One/HammersmithOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url("fonts/Oswald/Oswald-Regular.ttf");
+}
+:root {
+  /*Color Palette*/
+  --white__text: #F8FDFF;
+  --white__background: #ECEFF1;
+  --blue__text: #153447;
+  --blue__background: #263238;
+  --green__accent: #00E676;
+}
+/*Animations*/
+/*Fixed Overlay (navbar, graphic)*/
+.fixed--container {
+  width: 92vw;
+  height: 92vh;
+  position: fixed;
+  top: 0;
+  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.fixed--navbar{
+  width: 100%;
+  color: var(--white__text);
+  font-family: "HammersmithOne-Regular";
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.fixed--name {
+  display: inline-block;
+  cursor: pointer;
+}
+.fixed--about {
+  float: right;
+  margin-right: 2%;
+  display: inline-block;
+  cursor: pointer;
+}
+.fixed--contact {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+}
+.fixed--shapes {
+  width: 30em;
+  height: 30em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+
+}
+.fixed--shapes__back {
+  width: 100%;
+  height: 100%;
+  background-color: #445056;
+  -webkit-clip-path: polygon(49% 22%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(49% 22%, 100% 0, 100% 100%, 0% 100%);
+  transition: all 0.5s;
+}
+.fixed--shapes__front {
+  width: 80%;
+  height: 80%;
+  background-color: #626E74;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  -webkit-clip-path: polygon(49% 22%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(49% 22%, 100% 0, 100% 100%, 0% 100%);
+  transition: all 0.5s;
+}
+/*
+
+-
+
+Scroll content
+
+-
+
+*/
+.scroll--container {
+  width: 100vw;
+  background-color: var(--blue__background);
+  transition: all 0.3s;
+}
+.landing--container {
+  width: 96vw;
+  height: 100vh;
+
+  padding-left: 4%;
+}
+.landing--content__container {
+  padding-top: 16%;
+}
+.landing--name {
+  font-family: "Oswald-Regular";
+  font-size: 120px;
+  color: var(--white__text);
+  display: inline-block;
+  letter-spacing: 30px;
+
+
+}
+.landing--description {
+  margin-top: 1%;
+  font-size: 30px;
+  color: var(--green__accent);
+  font-family: "Oswald-Regular";
+
+}
+.landing--portfolio__wrapper {
+  transform: rotate(90deg);
+  float: right;
+  margin-top: 20%;
+  margin-right: -14%;
+  display: inline-flex;
+  align-items: center;
+
+
+}
+.landing--portolio__text {
+  font-size: 55px;
+  font-family: "HammersmithOne-Regular";
+  color: var(--green__accent);
+  display: inline-block;
+  letter-spacing: 10px;
+}
+.landing--portfolio__line {
+  width: 164px;
+  height: 5px;
+  display: inline-block;
+  background-color: var(--green__accent);
+  transition: all 0.5s;
+}
+/*MOLERGGROUPSECTION*/
+.item--container {
+  width: 100vw;
+  height: 100vh;
+
+}
+.screenshot--container {
+  width: 45%;
+  height: 60%;
+  padding-top: 20%;
+  padding-left: 45%;
+
+}
+.screenshot {
+  width: 100%;
+  height: 100%;
+  background-color: #BEC6C8;
+  box-shadow: 3px 3px 10px #A0A8AA;
+  z-index: 10;
+
+}

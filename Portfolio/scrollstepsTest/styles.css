@@ -1,0 +1,44 @@
+:root {
+  --green__background: #00230f;
+  --green__bright: #00ff67;
+}
+.html, body {
+  margin: 0;
+
+}
+@keyframes slideup {
+  0% {transform: translateY(100vh);}
+  100% {transform: translateY(0);}
+}
+.separator {
+  height: 20vh;
+  width: 100vw;
+}
+.t1 {
+  height: 300vh;
+  width: 100vw;
+  background-color: var(--green__background);
+
+}
+.t2{
+  height: 300vh;
+  width: 100vw;
+  background-color: var(--green__bright);
+  transition: all 0.5s;
+
+
+
+}
+.t3{
+  height: 300vh;
+  width: 100vw;
+  background-color: black;
+  transition: all 0.5s;
+
+
+
+}
+#cont {
+  transition: all 0.5s;
+  animation-duration: 0.3s;
+}

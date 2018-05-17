@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<head>
+<style>
+  .container {
+    width: 100%;
+    height: 500vh;
+    overflow: scroll;
+  }
+  .test {
+    width: 5em;
+    height: 5em;
+    background-color: red;
+    margin-top: 100vh;
+    opacity: var(--opacity);
+    will-change: opacity;
+    transform: translateZ(-300px);
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class = "test">
+</div>
+</div>
+
+
+
+
+
+
+
+<script src="basicScroll/dist/basicScroll.min.js"></script>
+<script>
+const instance = basicScroll.create({
+	elem: document.querySelector('.test'),
+	from: 'top-bottom',
+	to: 'middle-middle',
+	props: {
+		'--opacity': {
+			from: .01,
+			to: .99
+		}
+	}
+})
+
+instance.start()
+
+</script>
+
+</body>
+</html>

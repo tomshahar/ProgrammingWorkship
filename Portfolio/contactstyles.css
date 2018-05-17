@@ -1,0 +1,59 @@
+:root {
+  /*main*/
+  --green: #00e676;
+  --pink: #ff4081;
+  --blue: #00b0ff;
+  /*muted*/
+  --green__muted: #9fe2bd;
+  --pink__muted: #ffb3d0;
+  --blue__muted: #b3ebff;
+  /*background*/
+  --white__background: #f5f8fa;
+  --black__background: #122324;
+  --blue__background: #263238;
+  /*text*/
+  --white__text: #f8fdff;
+  --blue__text: #122324;
+  /*graphics*/
+  --dark__graphic: #445056;
+  --light__graphic: #626e74;
+  /*other*/
+  --grey__placeholder: #a0a8aa;
+}
+@keyframes slide {
+  0% {transform: translateX(0);}
+  50% {transform: translateX(5vw);}
+  100% {transform: translateX(0);}
+
+}
+
+
+
+
+.contact--home {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black__background);
+}
+#contact__title {
+  position: relative;
+  top: 25vh;
+  transition: all 0.3s;
+  transform: translateX(-60vw);
+  color: var(--white__text);
+}
+#contact__titletext {
+  text-shadow: 0.6vh 0.6vh 0vh var(--green);
+  font-size: 15vh;
+}
+.curtain--extended {
+  height: 100vh;
+}
+.separator {
+  width: 15vw;
+  height: 1vh;
+  background-color: var(--green);
+  margin-left: 7.7vw;
+  border-radius: 0.75vh;
+
+}

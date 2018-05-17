@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contactstyles.css">
+
+</head>
+<body onload = "onload()">
+
+  <div class = "contact--home">
+    <div class = "title__container" id = "contact__title">
+      <div class = "title"id = "contact__titletext">CONTACT</div>
+      <div class = "separator" id = "separator"></div>
+    </div>
+  </div>
+  <section class = "overlay" id = "overlay">
+    <div class = "bar__graphic">
+      <div class = "slide__right pink" id ="slide__right--pink">
+      </div>
+      <div class = "slide__right blue" id = "slide__right--blue"></div>
+    </div>
+    <div class = "fullscreen__menu" id = "fullscreen__menu">
+    </div>
+    <nav class = "nav" id = "navbar">
+
+        <a href = "index.html"class = "nav__button" id = "button1">Tom Shahar</a>
+        <a onclick = "menu__button()" class = "menu__button" id = "menu__button">
+          <div class = "menu__button--graphic" id = "menu__button--graphic">
+          </div>
+        </a>
+        <a href="contact.html"class = "nav__button" id = "button3">Contact</a>
+
+    </nav>
+
+
+
+  </section>
+  <div class = "curtain" id = "curtain"></div>
+<script>
+
+function onload(){
+  var curtain = document.getElementById('curtain');
+  curtain.setAttribute("style", "height: 100vh");
+  setTimeout(onload__2, 310, curtain);
+}
+function onload__2(elem) {
+  elem.setAttribute("style", "top: auto; bottom: 0; height: 0;")
+  var title = document.getElementById('contact__title');
+  title.setAttribute("style", "transform: translateX(0vw);" );
+}
+
+
+
+</script>
+</body>
+</html>

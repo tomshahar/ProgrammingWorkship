@@ -1,0 +1,201 @@
+@keyframes intro__left {
+  0% {right: 20vw;}
+  100% {right: -45vw;}
+}
+@keyframes intro__right {
+  0% {left: 20vw;}
+  100% {left: -45vw;}
+}
+@keyframes rotate__left {
+  0% {transform: scale(1)}
+  90% {transform: scale(1.5)}
+  98% {transform: scale(1)}
+  100% {transform: scale(1)}
+}
+@keyframes rotate__right {
+  0% {transform: scale(1)}
+  90% {transform: scale(1.5)}
+  98% {transform: scale(1)}
+  100% {transform: scale(1)}
+}
+/*@keyframes alter__right {
+  0% {clip-path: polygon(0 50%, 100% 0, 100% 100%);}
+  100% {clip-path: polygon(0 50%, 100% 72%, 100% 100%);}
+}*/
+
+
+:root {
+  --muted__purple: #96858f;
+  --muted__blue: #6d7993;
+  --gray__blue: #9099a2;
+  --bright__gray: #d5d5d5;
+  --title__font: 'Ceviche One', cursive;
+
+
+}
+::-webkit-scrollbar {
+}
+.html, body {
+  margin: 0;
+}
+
+.section {
+ width: 90vw;
+ height: 200vh;
+ padding-top: 3em;
+ padding-bottom: 3em;
+ padding-left: 5vw;
+ padding-right: 5vw;
+}
+.navbar {
+  width: 100vw;
+  height: 0;
+  transition-property: height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  background-color: var(--muted__blue);
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.24);
+}
+.title {
+  font-family: var(--title__font);
+}
+#section__1 {
+  background-color: var(--muted__blue);
+}
+#section__2 {
+  background-color: var(--bright__gray);
+}
+#section__3 {
+  background-color: var(--muted__purple);
+}
+#section__1__title {
+  font-size: 100px;
+  height: 10vh;
+}
+#navbar__title {
+  height: 0vh;
+  width: 10vw;
+  font-size: 60px;
+  opacity: 0;
+  transition-property: height opacity;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.3s;
+}
+.content__container {
+  display: flex;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 8px;
+}
+.content {
+  margin: 0 8px 0 0;
+  display: inline-flex;
+  flex-grow: 6;
+  width: 100%;
+  height: 55vh;
+  min-width: initial;
+}
+#content__1 {
+  background-color: var( --muted__purple);
+}
+#content__2 {
+  background-color: var(--gray__blue);
+}
+#content__3 {
+  background-color: var(--bright__gray);
+}
+.intro__container {
+   width: 100%;
+   height: 30%;
+   padding-top: 5%;
+   display: flex;
+   justify-content: space-between;
+}
+.poly {
+  width: 150px;
+  height: 150px;
+  display: hidden;
+  position: relative;
+  background-color: #414d65;
+  box-sizing: border-box;
+
+}
+#poly__1 {
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  animation-name: intro__right, rotate__right, alter__right;
+  animation-iteration-count: 1, 1, 1;
+  animation-duration: 2s, 2s, 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 0s, 1.9;
+  animation-timing-function: ease-in-out, ease-in, ease-in-out;
+  left: 20vw;
+  display: none;
+
+}
+#poly__2 {
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  animation-name: intro__left, rotate__left;
+  animation-iteration-count: 1, 1;
+  animation-duration: 2s, 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out, ease-in;
+  right: 20vw;
+  display: none;
+}
+#poly__1--border {
+  position: absolute;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  top: 2px;
+  left: 5px;
+  width: 145px;
+  height: 146px;
+  /*background: linear-gradient(to bottom right, var(--muted__blue), #7886a3);*/
+  background-color: var(--muted__blue);
+  display: none;
+}
+#poly__2--border {
+  position: absolute;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  top: 2px;
+  left: 0px;
+  width: 145px;
+  height: 146px;
+  /*background: linear-gradient(to bottom right, #7886a3, var(--muted__blue));*/
+  background-color: var(--muted__blue);
+  display: none;
+}
+@keyframes dash {
+  0% {stroke-dashoffset: 1000; }
+  10% {fill: var(--muted__blue);}
+  30% {fill: #373d4a;}
+  100% {stroke-dashoffset: 0; fill: #373d4a;}
+}
+@keyframes svg__move {
+  0% {height: auto; width: 100%; bottom: 30vh;}
+  100% {width: 38%; bottom: 15.5vh;}
+}
+.svg {
+  height: auto;
+  width: 100%;
+  position: relative;
+  bottom: 30vh;
+  animation-name: svg__move;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.svg path {
+  fill: var(--muted__blue);
+  stroke: #373d4a;
+  stroke-width: 2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation-name: dash;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}

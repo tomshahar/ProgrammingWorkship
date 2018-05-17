@@ -1,0 +1,612 @@
+.html, body {
+  margin: 0;
+  background-color: var(--fog);
+}
+/*
+:root {
+  --cardinal__red: #8c1515;
+  --cool__grey: #4d4f53;
+  --cardinal__black: #2e2d29;
+  --sandstone: #d2c295;
+  --light__sandstone: #F9F6EF;
+  --dark__sandstone: #a09267;
+  --fog: #F4F4F4;
+  --cloud: #dad7cb;
+  --cloud__dark: #a8a69a;
+  --bright__blue__link: #006CB8;
+}
+:root {
+
+}
+*/
+:root {
+  /*https://identity.stanford.edu/color.html*/
+  --cardinal__red: #8c1515;
+  --cool__grey: #4d4f53;
+  --cardinal__black: #2e2d29;
+  --sandstone: #d2c295;
+  --light__sandstone: #F9F6EF;
+  --dark__sandstone: #a09267;
+  --fog: #F4F4F4;
+  --cloud: #dad7cb;
+  --cloud__dark: #a8a69a;
+  --bright__blue__link: #006CB8;
+  --light__sage: #c7d1c5;
+  --palo__alto: #175e54;
+
+
+
+
+
+
+
+
+
+
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(Fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(Fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppins-LightItalic";
+  src: url(Fonts/Poppins/Poppins-LightItalic.ttf);
+}
+
+@keyframes line__animation {
+  0% {stroke-dashoffset: 260; }
+  100% {stroke-dashoffset: 0;}
+}
+@keyframes capital__line__animation {
+  0% {stroke-dashoffset: 470; }
+  100% {stroke-dashoffset: 0; }
+}
+@keyframes fill__red {
+  0% {fill: var(--fog);; }
+  /*100% {fill: var(--cardinal__red); stroke: var(--cardinal__red);}*/
+  100% {fill: var(--palo__alto); stroke: var(--palo__alto);}
+}
+@keyframes fill__black {
+  0% {fill: var(--fog);}
+  100% {fill: var(--stanford__black);}
+}
+@keyframes fadein {
+  0% {opacity: 0.1;}
+  100% {opacity: 0.99;}
+}
+@keyframes fadeout {
+  0% {opacity: 0.99;}
+  100% {opacity: 0;}
+}
+@keyframes minimize__logo {
+  0% {width: 96.5%; margin-left: 3.5%;}
+  100% {width: 22.5%; margin-left: 1.7%;}
+}
+
+@keyframes popup {
+  0% {display: none;}
+  100% {display: block;}
+
+}
+/*
+svg animation
+*/
+
+
+.svg {
+  margin-left: 3.5%;
+  height: auto;
+  width: 96.5%;
+  animation-name: minimize__logo;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+  position: fixed;
+}
+.svg__container {
+
+}
+.letter__moler {
+  stroke-width: 2;
+  fill: var(--fog);
+  stroke: black;
+  animation-name: fill__red;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+  animation-timing-function: ease-out;
+}
+.letter__group {
+  stroke-width: 1;
+  fill: var(--fog);
+  stroke: black;
+  animation-name: fill__black;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+  animation-timing-function: ease-out;
+}
+.letter path {
+  animation-delay: 1s;
+  animation-name: line__animation;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+}
+#lengthtest__M {
+  stroke-dasharray: 470;
+  stroke-dashoffset: 470;
+  animation-delay: 1s;
+  animation-name: capital__line__animation;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+#lengthtest__G {
+  stroke-dasharray: 470;
+  stroke-dashoffset: 470;
+  animation-delay: 1s;
+  animation-name: capital__line__animation;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+/*subtitle*/
+.subtitle__container {
+  opacity: 0;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 35vh;
+  animation-name: fadein, fadeout;
+  animation-duration: 3s, 1s;
+  animation-delay: 2s, 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.subtitle {
+  font-family: "Poppins-Light";
+  font-size: 200%;
+}
+/*menubar*/
+.menubar {
+  opacity: 0;
+  width: 26.5%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--light__sage);
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  z-index: -1;
+  box-shadow: 0 0 2px 1px var(--palo__alto);
+
+}
+
+.button__container {
+  z-index: 10;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  top: 16.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  flex-grow: 0.1;
+  z-index: 15;
+  /*border-width: 2px 0px 0px 0px;
+  border-color: var(--sandstone);
+  border-style: solid;*/
+}
+.button:hover {
+  background-color: var(--palo__alto);
+}
+.button__content {
+  font-family: "Poppins-Light";
+  font-size: 110%;
+  margin-left: 10%;
+  font-color: var(--cardinal__black);
+}
+#button__3 {
+  /*border-width: 2px 0px 2px 0px;*/
+}
+
+/*content*/
+.content__container {
+  width: 67.5%;
+  left: 26.5%;
+  position: absolute;
+  top: 0px;
+  height: auto;
+  padding: 3%;
+
+}
+.content {
+  display: none;
+  background-color: var(--light__sage);
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  box-shadow: 0 0 1px 1px var(--light__sage);
+}
+#content__1 {
+  display: none;
+}
+#content__2 {
+  display: none;
+}
+#content__3 {
+  display: none;
+}
+.content__title {
+  height: auto;
+  padding: 2.5%;
+  background-color: var(--palo__alto);
+  font-family: "Poppins-Medium";
+  font-size: 125%;
+}
+.content__inner {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+
+}
+/*
+Principal Investigator
+Post-Docs
+Graduate Students
+Undergraduate Students
+John Kirtley
+Admins
+Post-Doc Alumni
+Graduate Alumni
+Undergraduate Alumni
+
+<div class = "people__section" id = "people__section__1">
+  <div class = "people__section__title">
+    Principal Investigator
+  </div>
+  <div class = "people__wrapper">
+    <div class = "people__name" id = "people__name__1">
+      Kathryn Moler
+    </div>
+    <div class = "people__picture" id = "people__picture__1">
+    </div>
+    <div class = "people__info" id = "people__info__1">
+    </div>
+  </div>
+</div>
+
+
+Section
+
+Name
+Picture
+Info 1
+Info 2...
+
+*/
+.people__section {
+}
+
+.people__section__title {
+  width: 100%;
+  display: flex;
+  font-size: 120%;
+  font-family: "Poppins-Light";
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+
+.people__wrapper {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  grid-template-rows: 24% 19% 19% 19% 19%;
+}
+.people__name {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  font-size: 120%;
+  padding: 1.5%;
+  font-family: "Poppins-Light";
+}
+.people__picture {
+  grid-row-start: 1;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding-left: 20%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+
+}
+.picture__placeholder {
+  height: 12em;
+  width: 10em;
+  background-color: var(--palo__alto);
+}
+.people__info {
+  grid-row-start: 2;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  padding: 1.5%;
+  font-family: "Poppins-Light";
+  font-size: 100%;
+}
+.alumni__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.alumni__row {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  font-family: "Poppins-Light";
+}
+.alumni__name {
+  width: 26%;
+  padding-left: 5%;
+}
+.alumni__contact {
+  flex-grow: 1;
+  width: 37%;
+}
+.alumni__current {
+  flex-grow: 1;
+  width: 37%;
+}
+/*Publications*/
+.publication__wrapper {
+
+}
+.publication__title {
+  width: 100%;
+  font-size: 120%;
+  font-family: "Poppins-Light";
+  padding-top: 3%;
+  padding-bottom: 0.5%;
+}
+.publication__authors {
+  font-family: "Poppins-Light";
+  font-size: 100%;
+}
+.publication__journal {
+  display:inline-block;
+  font-family: "Poppins-LightItalic";
+  font-size: 100%;
+  padding-top: 0.5%;
+}
+.publication__link {
+  display:inline-block;
+  color:var(--bright__blue__link);
+  font-family: "Poppins-Light";
+  font-size: 100%;
+  padding-top: 0.5%;
+  padding-left: 1%;
+}
+/*Mesoscopic Magnetic Imaging*/
+.description {
+  font-size: 100%;
+  width: 100%;
+  font-family: "Poppins-Light";
+}
+/*
+Responsivity
+*/
+.mobile__only {
+  display: none;
+}
+.desktop__only {
+  display: block;
+}
+@keyframes minimize__logo__mobile {
+  0% {width: 96.5%; top:15vh;}
+  100% {width: 50%; top:0vh;}
+}
+@keyframes minimize__logo__mobile__container {
+  0% {top:15vh;}
+  100% {top:0vh; border-bottom-width: thin;}
+}
+@media screen and (max-width: 750px) {
+  .html, body {
+
+  }
+  .mobile__only {
+    display: block;
+  }
+  .menubar {
+    width: 100%;
+    height: 61vh;
+    z-index: 30;
+    transition: height 0.3s;
+    overflow: hidden;
+  }
+  .subtitle__container {
+    display: none;
+  }
+  .content__container {
+    width: 94%;
+    height: auto;
+    padding: 3%;
+    position: absolute;
+    top: 18%;
+    left: 0px;
+    display: block;
+  }
+  .svg {
+    animation-name: minimize__logo__mobile;
+    margin-left: 0%;
+
+  }
+  .svg__container {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 12%;
+    margin-left: 0%;
+    top: 15vh;
+    animation-name: minimize__logo__mobile__container;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    z-index: 35;
+
+  }
+  .button__container {
+    padding-top: 5%;
+    height: 42vh;
+    position: relative;
+    top: 9vh;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    z-index: 15;
+    opacity: 1;
+    transition: opacity 0.3s;
+    /*border-width: 2px 0px 0px 0px;
+    border-color: var(--sandstone);
+    border-style: solid;*/
+  }
+  .minimize__button__container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    z-index: 15;
+    justify-content: center;
+    align-items: center;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: var(--palo__alto);
+    border-top-width: thin;
+    border-top-style: solid;
+    border-top-color: var(--palo__alto);
+    top:12vh;
+    position: relative;
+    height: 6vh;
+
+  }
+  .button__minimized {
+    flex-grow: 0;
+  }
+  .button:hover {
+    background-color: var(--palo__alto);
+  }
+  .minimize__button {
+    height: 1.5em;
+    width: 1.5em;
+    clip-path: circle(50% at 50% 50%);
+    background-color: var(--palo__alto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  .minimize__button__graphic {
+    clip-path: polygon(0 18%, 50% 68%, 100% 18%, 100% 42%, 50% 90%, 0 42%);
+    background-color: var(--cardinal__black);
+    width: 0.9em;
+    height: 0.9em;
+  }
+  .minimize__button--toggle {
+    transform: rotate(180deg);
+  }
+  .button__container--toggle {
+    height: 0;
+  }
+  .menubar--toggle {
+    height: 18%;
+  }
+  .button--toggle {
+    display: none;
+    opacity: 0;
+  }
+  .people__wrapper {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 24% 19% 19% 19% 19% ;
+  }
+  .people__name {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 120%;
+    padding: 1.5%;
+    font-family: "Poppins-Light";
+  }
+  .people__picture {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-left: 20%;
+    padding-top: 4%;
+    padding-bottom: 3%;
+
+  }
+  .picture__placeholder {
+    height: 12em;
+    width: 10em;
+    background-color: var(--palo__alto);
+  }
+  .people__info {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding: 1.5%;
+    font-family: "Poppins-Light";
+    font-size: 100%;
+  }
+  .desktop__only {
+    display: none
+  }
+  .publication__title {
+    font-size: 130%;
+    padding-top: 7%;
+
+  }
+  .publication__authors {
+
+  }
+  .publication__journal {
+    display:block;
+
+  }
+  .publication__link {
+    display:block;
+    padding-left: 0%;
+  }
+
+
+
+
+}
