@@ -1,9 +1,16 @@
-html,body {
+html {
+
+
+}
+body {
   margin: 0;
+  background: var(--white__background);
+
+
 
 }
 #scroll__container {
-  background: #122324;
+  background: var(--white__background);
   background-attachment: fixed;
   transition: all 0.3s;
   overflow: hidden;
@@ -104,7 +111,6 @@ overlay
   transition: all 0.3s;
   float: right;
   height: 1em;
-  transform: translateZ();
 
 }
 .menu__button--graphic {
@@ -161,12 +167,18 @@ overlay
   width: 0vw;
 
 }
+.green {
+  width: 0vw;
+  background-color: var(--green);
+  transition: none;
+}
 .graphic--container {
   width: 25vw;
   height: 25vw;
   position: fixed;
   bottom: 0;
   right: 0;
+  transition: all 0.3s;
 }
 .graphic--back {
   width: 100%;
@@ -221,6 +233,7 @@ home
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background: #122324;
   /*background: linear-gradient(to right, #122324, #263238);*/
 
 }
@@ -373,11 +386,31 @@ sections
   transition: all 0.2s;
 
 }
+.lengthener {
+  width: 100vw;
+  height: 120vh;
+  background-color: var(--white__background);
+}
+.placeholder {
+  height: 0vh;
+  width: 100vw;
+  background-color: var(--white__background);
+}
+.contact__section {
+  width: 100vw;
+  height: 0vh;
+  background-color: var(--black__background);
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+}
+
 /*
 
 Moler group
 
 */
+
 #moler__group--title {
   color: var(--pink);
   text-shadow: 0.4vh 0.4vh 0vh var(--black__background);
@@ -421,8 +454,3 @@ nueva soccer
 contact--home
 
 */
-.contact {
-  width: 100vw;
-  height: 1vh;
-  background-color: var(--blue__background)
-}

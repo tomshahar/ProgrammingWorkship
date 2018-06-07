@@ -1,0 +1,44 @@
+.scroll_map {
+
+}
+.map_block {
+
+}
+#block_1 {
+  height: 100vh;
+  width: 100vw;
+}
+#block_2 {
+  height: 200vh;
+  width: 100vw;
+}
+#block_3 {
+  height: 100vh;
+  width: 100vw;
+
+}
+.visible_content {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+}
+.content {
+  height: 0vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}
+#content_1 {
+  background-color: red;
+
+}
+#content_2 {
+  background-color: green;
+
+}
+#content_3 {
+  background-color: blue;
+
+}

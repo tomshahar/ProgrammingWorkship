@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body onload = "onload()">
-  <div class = "graphic--container">
+  <div class = "graphic--container" id = "graphic--container">
     <div class = "graphic--back" id = "graphic--fore">
       <div class = "graphic--fore" id = "graphic--back">
       </div>
@@ -43,6 +44,8 @@
     </div>
   </section>
   <!--section 2-->
+  <section class = "placeholder" id = "placeholder">
+  </section>
   <section class = "section" id = "nueva__soccer">
     <div class = "title__container--section" id = "nueva__soccer--title__container">
       <div class = "section__title"id = "nueva__soccer--title">NUEVA SOCCER</div>
@@ -56,11 +59,17 @@
         </div>
       </div>
     </div>
+    <div class = "contact__section" id = "contact__section">
+    </div>
+
   </section>
-  <section class = "contact" id = "contact__section">
-  </section>
+  <!--Scroll Lengthener-->
+  <div class = "lengthener" id = "bottom__lengthener">
+  </div>
+
   <!---->
 </div>
+
 <!--navbar and graphic-->
 <section class = "overlay" id = "overlay">
   <div class = "bar__graphic">
@@ -68,6 +77,7 @@
     </div>
     <div class = "slide__right blue" id = "slide__right--blue"></div>
   </div>
+  <div class = "slide__right green" id = "slide__right--green"></div>
   <div class = "fullscreen__menu" id = "fullscreen__menu">
   </div>
   <nav class = "nav" id = "navbar">

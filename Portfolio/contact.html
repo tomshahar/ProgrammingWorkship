@@ -35,16 +35,16 @@
 
 
   </section>
-  <div class = "curtain" id = "curtain"></div>
+  <div class = "curtain" id = "contact__curtain"></div>
 <script>
 
 function onload(){
-  var curtain = document.getElementById('curtain');
-  curtain.setAttribute("style", "height: 100vh");
+  var curtain = document.getElementById('contact__curtain');
+  curtain.setAttribute("style", "width: 100vw");
   setTimeout(onload__2, 310, curtain);
 }
 function onload__2(elem) {
-  elem.setAttribute("style", "top: auto; bottom: 0; height: 0;")
+  elem.setAttribute("style", "left: auto; right: 0; width: 0;")
   var title = document.getElementById('contact__title');
   title.setAttribute("style", "transform: translateX(0vw);" );
 }
