@@ -1,0 +1,21 @@
+:root {
+  --green-main: #66bb6a;
+  --pink-main: #ff79b0;
+  --black-text: rgba(20,20,20,1);
+}
+@font-face {
+  font-family: ProximaNova-Light;
+  src: url("fonts/ProximaNovaLight.ttf");
+}
+@font-face {
+  font-family: ProximaNova-Bold;
+  src: url("fonts/ProximaNovaBold.ttf");
+}
+@font-face {
+  font-family: ProximaNova-Regular;
+  src: url("fonts/ProximaNovaRegular.ttf");
+}
+@font-face {
+  font-family: Catamaran-ExtraBold;
+  src: url("fonts/Catamaran-ExtraBold.ttf");
+}

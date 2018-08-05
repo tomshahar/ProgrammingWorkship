@@ -1,0 +1,36 @@
+:root {
+  --pink-main: #ff4081;
+  --pink-light: #f8bbd0;
+  --pink-dark: #880e4f;
+
+  --blue-main: #448aff;
+  --blue-light: #bbdefb;
+  --blue-dark: #0d47a1;
+
+  --green-main: #69f0ae;
+  --green-light: #c8e6c9;
+
+  --fontColor-Black: rgb(30,30,30);
+
+
+
+}
+@font-face {
+  font-family: titleFont-Black;
+  src: url("fonts/Work_Sans/WorkSans-Black.ttf")
+}
+@font-face {
+  font-family: titleFont-Medium;
+  src: url("fonts/Work_Sans/WorkSans-Medium.ttf")
+
+}
+@font-face {
+  font-family: titleFont-Regular;
+  src: url("fonts/Work_Sans/WorkSans-Regular.ttf")
+
+}
+@font-face {
+  font-family: titleFont-Light;
+  src: url("fonts/Work_Sans/WorkSans-Light.ttf")
+
+}

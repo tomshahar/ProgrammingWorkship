@@ -1,0 +1,111 @@
+@import "palette.css";
+@import "portfolio.css";
+.main-title__container {
+  position: absolute;
+  left: 3vw;
+  top: 20vh;
+  display: none;
+}
+
+h1 {
+  font-size: 18vh;
+  font-family: titleFont-Black;
+  letter-spacing: 0.8vw;
+  margin: 0;
+  background: linear-gradient(
+    60deg,
+    var(--fontColor-Black) 0%,
+    var(--fontColor-Black) 10%,
+    var(--blue-main) 10%,
+    var(--blue-main) 43%,
+    var(--blue-dark) 43%,
+    var(--blue-dark) 76%,
+    var(--fontColor-Black) 76%,
+    var(--fontColor-Black) 100%
+    );
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleAnim 20s ease-in-out infinite;
+}
+@keyframes titleAnim {
+  50% {background-position: 400vw 0px;}
+  100% {background-position: 0 0}
+}
+
+h2 {
+  font-size: 4.2vh;
+  font-family: titleFont-Medium;
+  margin: 0;
+  margin-left: 1vw;
+  color: var(--fontColor-Black);
+}
+p {
+  font-size: 2.2vh;
+  font-family: titleFont-Light;
+  color: var(--fontColor-Black);
+  line-height: 3vh;
+}
+a {
+  text-decoration: none;
+  color: var(--blue-main);
+  cursor: pointer;
+}
+.main-btn__container {
+  position: absolute;
+  left: 4vw;
+  top: 70vh;
+  display: none;
+}
+.btn__wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5vh;
+  padding: 1vh 2vh;
+  border: medium var(--blue-main) solid;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 0.5vw;
+
+}
+.btn__txt {
+  font-size: 3vh;
+  font-family: titleFont-Light;
+  margin: 0;
+  text-align: center;
+  padding: 0.3vh 0.5vw;
+  color: var(--blue-main);
+  transition: 0.2s;
+
+}
+.btn__wrapper:hover {
+  background-color: var(--blue-main);
+}
+.btn__wrapper:hover .btn__txt {
+  color: white;
+}
+.food-link__wrapper {
+  padding: 2vh 2vh;
+  position: absolute;
+  top: 67vh;
+  left: 63vw;
+  width: 25vw;
+  display: none;
+}
+.food-link__header {
+  font-size: 3vh;
+  margin: 0;
+
+}
+header {
+  position: fixed;
+  top: 2vh;
+  left: 0;
+}
+header a {
+  margin-left: 3vw;
+  font-family: titleFont-Regular;
+  font-size: 2vh;
+  color: var(--fontColor-Black)
+}
