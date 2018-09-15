@@ -1,0 +1,146 @@
+@import "palette.css";
+.recipe-container {
+  width: 77vw;
+  margin-left: 13vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.recipe-wrapper {
+  width: 22vw;
+  background-color: white;
+  box-shadow: 0vh 0.2vh 0.4vh rgba(30,30,30,0.3);
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-block;
+  margin-right: 3vw;
+  margin-top: 10vh;
+}
+.recipe-wrapper:hover {
+  box-shadow: 0vh 0.4vh 1vh rgba(30,30,30,0.5);
+}
+.recipe-image {
+  background-image: url("images/cookies1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  height: 30vh;
+}
+.recipe-text__container {
+  padding: 0vh 2vh 1vh 2vh;
+}
+.recipe-header {
+  font-family: ProximaNova-Bold;
+  font-size: 2.3vh;
+  color: var(--black-text);
+}
+.recipe-time {
+  font-family: ProximaNova-Regular;
+  font-size: 2.1vh;
+  color: var(--black-text);
+  display: inline-block;
+}
+.recipe-yield {
+  font-family: ProximaNova-Regular;
+  font-size: 2.1vh;
+  color: var(--black-text);
+  display: inline-block;
+  float: right;
+}
+.recipe-page {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page-section__links {
+  position: fixed;
+  top: 15vh;
+  left: 3vw;
+}
+.page-link {
+  display: block;
+  font-family: ProximaNova-Bold;
+  font-size: 3vh;
+  line-height: 6vh;
+  text-decoration: none;
+  color: var(--black-text);
+  transition: 0.2s;
+}
+.page-link:hover {
+  color: var(--pink-main);
+}
+
+.page-scroll__container {
+  top: 15vh;
+  position: absolute;
+  left: 15vw;
+}
+.page-image {
+  background-color: rgba(30,30,30,0.3);
+  height: 50vh;
+  width: 40vw;
+}
+.page-header {
+  font-family: ProximaNova-Bold;
+  color: var(--green-main);
+  margin-bottom: 2vh;
+  margin-top: 4vh;
+
+}
+.page-time {
+  font-family: ProximaNova-Regular;
+  font-size: 2.5vh;
+  line-height: 4vh;
+}
+.page-yield {
+  font-family: ProximaNova-Regular;
+  font-size: 2.5vh;
+  line-height: 4vh;
+}
+.page-ingredients {
+  font-family: ProximaNova-Regular;
+  font-size: 2.3vh;
+  line-height: 4vh;
+  margin-top: 4vh;
+}
+.page-ingredients span {
+  font-family: ProximaNova-Bold;
+  font-size: 3vh;
+  line-height: 5.5vh;
+  color: var(--green-main);
+}
+.page-instructions {
+  margin-top: 4vh;
+  font-family: ProximaNova-Regular;
+  font-size: 2.2vh;
+  line-height: 3vh;
+  width: 60vw;
+  white-space: normal;
+  padding-bottom: 50vh;
+}
+.page-instructions span {
+  font-family: ProximaNova-Bold;
+  font-size: 3vh;
+  line-height: 5.5vh;
+  color: var(--green-main);
+}
+.page-back__btn {
+  width: 4vw;
+  height: 4vw;
+  left: 3vw;
+  position:fixed;
+  top: 85vh;
+  cursor: pointer;
+}
+.page-back__btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--black-text);
+  transition: 0.2s;
+}
+.page-back__btn:hover svg {
+  fill: var(--pink-main);
+}
