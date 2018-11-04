@@ -1,0 +1,73 @@
+.nav__btn-container a:nth-child(1) {
+  color: rgba(0,90,10,1);
+  border-bottom: 1.5px solid rgba(0,90,10,1);
+}
+.recipe-wrapper {
+  width:  21vw;
+  height: 40vh;
+  background-color: #306844;
+  margin-top: 4vh;
+  margin-bottom: 6vh;
+  cursor: pointer;
+
+}
+.recipes-container {
+  margin: 0 10vw;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+}
+.recipe-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#recipe-image-1 {
+  background-image: url("images/sample1.jpeg");
+}
+#recipe-image-2 {
+  background-image: url("images/sample2.jpeg");
+}
+#recipe-image-3 {
+  background-image: url("images/sample3.jpeg");
+}
+#recipe-image-4 {
+  background-image: url("images/sample4.jpeg");
+}
+#recipe-image-5 {
+  background-image: url("images/sample5.jpeg");
+}
+#recipe-image-6 {
+  background-image: url("images/sample6.jpeg");
+}
+.recipe-bottom-bar {
+  background-color:rgba(48,104,68, 0.9);
+  margin-bottom: 0;
+  margin-top: auto;
+  height: 8vh;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+
+}
+.recipe-title {
+  color: white;
+  font-size: 1rem;
+  margin: 1vh 1vw;
+  line-height: 3vh;
+}
+/*
+
+Page Styles
+
+*/
+.recipe-page {
+  display: none;
+  margin: 5vh 20vw;
+}
+.recipe-page-image {
+  height: 40vh;
+  background-color: rgba(0,0,0,0.3);
+}
